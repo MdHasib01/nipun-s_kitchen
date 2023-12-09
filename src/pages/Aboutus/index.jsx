@@ -1,101 +1,15 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom";
-
-import { Button, Img, Line, Text } from "components";
+import { Button, Img, Text } from "components";
 import Footer from "components/Footer";
+import Navbar from "components/Navbar";
 
 const AboutusPage = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <div className="bg-gray-50 flex flex-col font-poppins sm:gap-10 md:gap-10 gap-[120px] items-center justify-end mx-auto pt-[51px] w-full">
-        <div className="flex flex-col items-center justify-start max-w-[1112px] mx-auto md:px-5 w-full">
-          <div className="flex md:flex-col flex-row md:gap-5 items-start justify-start w-full">
-            <Img
-              className="h-[51px] w-[12%]"
-              src="images/img_logo.svg"
-              alt="Logo"
-            />
-            <div className="flex md:flex-1 sm:flex-col flex-row font-opensans sm:gap-5 items-start justify-center md:ml-[0] ml-[107px] md:mt-0 mt-2.5 pt-0.5 w-[52%] md:w-full">
-              <div className="flex flex-col items-center justify-start">
-                <Text
-                  className="text-base text-gray-900_cc"
-                  size="txtOpenSansRomanRegular16Gray900cc"
-                >
-                  Home
-                </Text>
-              </div>
-              <div className="flex flex-col items-center justify-start ml-8 sm:ml-[0]">
-                <Text
-                  className="common-pointer text-base text-gray-900_cc"
-                  size="txtOpenSansRomanRegular16Gray900cc"
-                  onClick={() => navigate("/menu")}
-                >
-                  Menu
-                </Text>
-              </div>
-              <div className="flex flex-col gap-[7px] items-start justify-start ml-8 sm:ml-[0] w-[12%] sm:w-full">
-                <Text
-                  className="text-base text-red-400"
-                  size="txtOpenSansRomanRegular16Red400"
-                >
-                  About us
-                </Text>
-                <Line className="bg-red-400 h-px w-[69%]" />
-              </div>
-              <div className="flex flex-col items-center justify-start sm:ml-[0] ml-[31px]">
-                <Text
-                  className="common-pointer text-base text-gray-900_cc"
-                  size="txtOpenSansRomanRegular16Gray900cc"
-                  onClick={() => navigate("/orderonline")}
-                >
-                  Order online
-                </Text>
-              </div>
-              <div className="flex flex-col items-center justify-start sm:ml-[0] ml-[27px]">
-                <Text
-                  className="common-pointer text-base text-gray-900_cc"
-                  size="txtOpenSansRomanRegular16Gray900cc"
-                  onClick={() => navigate("/reservation")}
-                >
-                  Reservation
-                </Text>
-              </div>
-              <div className="flex flex-col items-center justify-start sm:ml-[0] ml-[31px]">
-                <Text
-                  className="common-pointer text-base text-gray-900_cc"
-                  size="txtOpenSansRomanRegular16Gray900cc"
-                  onClick={() => navigate("/contact")}
-                >
-                  Contact us
-                </Text>
-              </div>
-            </div>
-            <Button
-              className="cursor-pointer flex h-[50px] items-center justify-center md:ml-[0] ml-[122px] w-[50px]"
-              leftIcon={
-                <Img
-                  className="h-6 m-[13px]"
-                  src="images/img_cart.svg"
-                  alt="cart"
-                />
-              }
-              shape="circle"
-              color="white_A700"
-              variant="fill"
-            ></Button>
-            <Button
-              className="cursor-pointer font-semibold leading-[normal] min-w-[112px] md:ml-[0] ml-[25px] text-center text-sm"
-              shape="round"
-              color="red_400"
-              size="sm"
-              variant="fill"
-            >
-              Log in
-            </Button>
-          </div>
+        <div className="flex flex-col items-center justify-start max-w-[1240px] mx-auto md:px-5 w-full">
+          <Navbar activeNav={"aboutus"} />
           <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between mt-[78px] w-full">
             <div className="md:h-[541px] h-[543px] relative w-[543px] sm:w-full">
               <div className="bg-bluegray-100_63 flex flex-col sm:h-auto h-full items-center justify-start m-auto p-[52px] md:px-10 sm:px-5 rounded-[50%] w-[543px]">
